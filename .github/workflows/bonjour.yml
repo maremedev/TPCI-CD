@@ -1,4 +1,5 @@
 
+
 name: Mon premier pipeline
 
 on:
@@ -21,5 +22,13 @@ jobs:
         run: ls -la
       - name: Récupérer le code
         uses: actions/checkout@v7
+      - name: Lister les fichiers après
+        run: ls -la
+      - name: Lister les fichiers avant
+        run: ls -la
+      - name: Récupérer le code
+        uses: actions/checkout@v7
+      - name: Lire un fichier
+        run: cat fichier-inexistant.txt
       - name: Lister les fichiers après
         run: ls -la
